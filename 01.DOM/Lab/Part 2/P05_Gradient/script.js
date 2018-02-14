@@ -6,7 +6,7 @@ function attachGradientEvents() {
 
 
     function printCoordinates(event) {
-        let xPosition = e.offsetX;
+        let xPosition = event.offsetX;
         let totalWidth = this.clientWidth - 1;
         let percentage = Math.trunc(xPosition / totalWidth * 100);
         document.getElementById('result').textContent = percentage + '%';
