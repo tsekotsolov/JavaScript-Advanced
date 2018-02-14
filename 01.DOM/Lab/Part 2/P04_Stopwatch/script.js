@@ -11,7 +11,7 @@ function stopwatch() {
 
     function startTimer(event) {
 
-        div.textContent ='00:00'
+        div.textContent = '00:00'
         startButton.disabled = true;
         stopButton.disabled = false;
         let time = 0;
@@ -19,10 +19,9 @@ function stopwatch() {
 
 
         function startCounter() {
-            time++;  
+            time++;
             div.textContent = ("0" + Math.trunc(time / 60)).slice(-2) + ':' + ("0" + (time % 60))
                 .slice(-2);
-                
         }
 
     }
