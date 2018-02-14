@@ -8,7 +8,6 @@ function stopwatch() {
     let div = document.getElementById('time');
     let start = null;
 
-
     function startTimer(event) {
 
         div.textContent = '00:00'
@@ -31,6 +30,4 @@ function stopwatch() {
         stopButton.disabled = true;
         clearInterval(start);
     }
-
-
 }
