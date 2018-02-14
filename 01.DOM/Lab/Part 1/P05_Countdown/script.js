@@ -7,7 +7,7 @@ function countdown(startTime) {
     time--;
     box.value = Math.trunc(time / 60) + ':' + ("0" + (time % 60))
     .slice(-2);
-    console.log(box.value);
+    
   }
 }
 
