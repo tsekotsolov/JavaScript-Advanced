@@ -1,9 +1,9 @@
 function validate() {
 
-  document.getElementById('email').addEventListener('change', onChange);
+  document.getElementById('email').addEventListener('change', onType);
   let regex = /^([\w\-.]+)@([a-z]+)(\.[a-z]+)+$/;
 
-  function onChange(event) {
+  function onType(event) {
     if (!regex.test(event.target.value))
       this.className = 'error';
     else
