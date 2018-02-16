@@ -21,13 +21,14 @@ function attachEventsListeners() {
 
     let convertedToDays = 0;
 
+    //Convert the input to days
     if (this.id === 'daysBtn') {
-      convertedToDays = document.getElementById('days').value ;
+      convertedToDays = document.getElementById('days').value;
     } else if (this.id === 'hoursBtn') {
       convertedToDays = document.getElementById('hours').value / timeObject.hours
     } else if (this.id === 'minutesBtn') {
       convertedToDays = document.getElementById('minutes').value / timeObject.minutes
-    }else if (this.id === 'secondsBtn') {
+    } else if (this.id === 'secondsBtn') {
       convertedToDays = document.getElementById('seconds').value / timeObject.seconds
     }
 
