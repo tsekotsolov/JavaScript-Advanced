@@ -2,13 +2,11 @@ function attachEventsListeners() {
 
   let buttons = document.querySelectorAll('div input:nth-child(3)');
 
-
   for (const button of buttons) {
     button.addEventListener('click', calc);
   }
 
-  let dayObject = {
-
+  let timeObject = {
     'days': 1,
     'hours': 24,
     'minutes': 1440,
@@ -21,19 +19,22 @@ function attachEventsListeners() {
     let minutes = document.getElementById('minutes');
     let seconds = document.getElementById('seconds');
 
+    let convertedToDays = 0;
+
     if (this.id === 'daysBtn') {
-      days = document.getElementById('days').value
-      hours.value = Number(days) * 24;
-      minutes.value = Number(days) * 1440;
-      seconds.value = Number(days) * 86400;
+      convertedToDays = document.getElementById('days').value ;
     } else if (this.id === 'hoursBtn') {
-
-      hours = document.getElementById('hours').value;
-      days.value = hours / 24;
-
+      convertedToDays = document.getElementById('hours').value / timeObject.hours
+    } else if (this.id === 'minutesBtn') {
+      convertedToDays = document.getElementById('minutes').value / timeObject.minutes
+    }else if (this.id === 'secondsBtn') {
+      convertedToDays = document.getElementById('seconds').value / timeObject.seconds
     }
 
+    days.value = convertedToDays;
+    hours.value = convertedToDays * timeObject.hours;
+    minutes.value = convertedToDays * timeObject.minutes;
+    seconds.value = convertedToDays * timeObject.seconds;
+
   }
-
-
 }
