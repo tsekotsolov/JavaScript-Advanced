@@ -11,4 +11,20 @@ function attachEventsListeners() {
         in: 0.0254,
     }
 
+    let button = document.getElementById('convert')
+    button.addEventListener('click', convert);
+
+    function convert() {
+
+        let inputUnits = document.querySelector('#inputUnits').options[document.querySelector('#inputUnits').selectedIndex].value;
+
+        let outputUnits = document.querySelector('#outputUnits').options[document.querySelector('#outputUnits').selectedIndex].value;
+
+        let inputUserValue = Number(document.getElementById('inputDistance').value);
+
+        let output = inputUserValue * distanceObj[inputUnits] / distanceObj[outputUnits];
+
+        document.getElementById('outputDistance').value = output;
+    }
+
 }
