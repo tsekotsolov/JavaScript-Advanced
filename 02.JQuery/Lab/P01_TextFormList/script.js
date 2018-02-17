@@ -3,7 +3,8 @@ function extractText() {
    $('li')
     .toArray()
     .map(li=>li.textContent)
-    .join(', '));
+    .join(', ')
+  );
 }
 
 
