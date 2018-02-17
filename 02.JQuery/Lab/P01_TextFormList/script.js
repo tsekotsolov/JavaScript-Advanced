@@ -1,5 +1,5 @@
 function extractText() {
- $('#result').append(
+ $('#result').text(
    $('li')
     .toArray()
     .map(li=>li.textContent)
