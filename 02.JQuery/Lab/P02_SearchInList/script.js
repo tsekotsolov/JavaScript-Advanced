@@ -4,12 +4,12 @@ function search() {
     let matches = 0;
 
     for (const item of liContent) {
-        if (item.textContent.indexOf(userInput) !== -1) {
-            item.style.fontWeight = "bold";
+        if (item.textContent.includes(userInput)) {
+            $(item).css('font-weight','bold');
             matches++;
         }
         else{
-            item.style.fontWeight = "";
+            $(item).css('font-weight','');
         }
     }
     $('#result').text(`${matches} mathes found`)
