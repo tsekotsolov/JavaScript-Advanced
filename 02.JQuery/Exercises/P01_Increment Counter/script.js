@@ -4,6 +4,5 @@ function increment(selector) {
     let fragment = document.createDocumentFragment();
     let textarea = $('<textarea>');
 
-    console.log(container);
-    console.log(fragment);
+
 }
