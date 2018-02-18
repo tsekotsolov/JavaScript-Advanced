@@ -1,7 +1,7 @@
 function attachEvents() {
   $('#items').find('li').click(select);
   $('#showTownsButton').click(printTowns);
-
+8
   function select() {
 
     if ($(this).attr('data-selected')) {
