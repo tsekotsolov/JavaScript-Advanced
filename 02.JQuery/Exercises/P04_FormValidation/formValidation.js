@@ -8,7 +8,7 @@ let confirmPass = $('#confirm-password');
 let submitBtn = $('#submit');
 let companyCheckbox = $('#company')
 let companyNumber = $('#companyNumber');
-let compayInfo = $('#companyInfo')
+let compayInfo = $('#companyInfo');
 let validDiv = $('#valid');
    
     
