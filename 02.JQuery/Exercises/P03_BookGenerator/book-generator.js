@@ -21,6 +21,7 @@ function createBook(selector, title, author, isbn) {
             container.appendTo(selector);
             id++;
         }
+        
     }();
 
     bookGenerator(selector, title, author, isbn);

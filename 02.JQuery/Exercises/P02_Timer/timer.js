@@ -18,4 +18,5 @@ function timer() {
         $('#minutes').text(("0" + Math.trunc((time/60)%60)).slice(-2));
         $('#seconds').text(("0" + Math.trunc(time%60)).slice(-2));
     }
+    
 }
