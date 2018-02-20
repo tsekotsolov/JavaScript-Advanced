@@ -14,3 +14,4 @@ function dollarFormatter(formatCurrency) {
 
 let dollars = dollarFormatter(formatCurrency);
 console.log(dollars(5345));
+
