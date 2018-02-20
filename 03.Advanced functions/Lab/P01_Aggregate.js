@@ -12,4 +12,5 @@ function aggregate(arr){
     }
 }
 
+
 aggregate([2,3,10,5]);
