@@ -15,3 +15,15 @@ function dollarFormatter(formatCurrency) {
 let dollars = dollarFormatter(formatCurrency);
 console.log(dollars(5345));
 
+
+// simple curry function expample
+
+function myCurry(a,b) {
+  return function (c) {
+    return a + b + c;
+  }
+}
+
+let currySum = myCurry(5,6);
+console.log(currySum(1));
+console.log(currySum(3));
