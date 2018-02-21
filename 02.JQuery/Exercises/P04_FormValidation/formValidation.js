@@ -35,7 +35,7 @@ function validate() {
         validateInput(regexPassword, confirmPass);
 
         if (password.val() != confirmPass.val()) {
-            //password.css('border', '2px solid red');
+            password.css('border', '2px solid red');
             confirmPass.css('border', '2px solid red');
         }
 
