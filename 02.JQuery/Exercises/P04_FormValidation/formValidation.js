@@ -14,7 +14,6 @@ function validate() {
         event.preventDefault();
         validateForm();
     })
-
     companyCheckbox.change(() => {
        
         if (companyCheckbox.is(':checked')) {
@@ -23,7 +22,6 @@ function validate() {
             compayInfo.css('display', 'none');
         }
     })
-
     function validateForm() {
         const regexUserName = /^[0-9A-Za-z]{3,20}$/;
         const regexEmail = /^.*?@.*\..*$/;
@@ -38,36 +36,26 @@ function validate() {
             password.css('border', '2px solid red');
             confirmPass.css('border', '2px solid red');
         }
-
-        
         if (companyCheckbox.is(':checked')) {
             const regexCompanyNumber = /^[0-9]{4}$/;
             validateInput(regexCompanyNumber, companyNumber);
         }
-        
         let allInputs = $('input');
         let isValid = true;
         allInputs.each((index, input) => {
 
             if ($(input).attr("style")) {
-
                 isValid = false;
-               
-
             }
         });
 
         if (isValid) {
             validDiv.css('display', 'block');
         }
-
     }
-
     function validateInput(regexPattern, input) {
         if (!regexPattern.test(input.val())) {
             input.css('border', '2px solid red');
         }
-        
     }
-
 }
