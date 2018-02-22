@@ -1,10 +1,10 @@
 function sort(array,order){
 
 if (order === "asc") {
-  console.log(array.sort((a,b)=>a-b));
+  return(array.sort((a,b)=>a-b));
 }
 else{
-  console.log(array.sort((a,b)=>b-a));
+  return(array.sort((a,b)=>b-a));
 }
 
 }
