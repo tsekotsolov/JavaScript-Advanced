@@ -25,5 +25,3 @@ function args() {
 args('cat', 42, function () {
   console.log('Hello world!')
 });
-
-//args({ name: 'bob'}, 3.333, 9.999);
