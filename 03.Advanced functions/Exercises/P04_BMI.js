@@ -1,7 +1,7 @@
 function calcBMI(name, age, weight, height) {
 
     let personObj = {
-        
+
         name: name,
         personalInfo: {
             age: age,
@@ -10,8 +10,8 @@ function calcBMI(name, age, weight, height) {
         }
     }
 
-    height = height/100;
-    personObj.BMI = Math.round(weight / (height*height));
+    height = height / 100;
+    personObj.BMI = Math.round(weight / (height * height));
 
     if (personObj.BMI < 18.5) {
         personObj.status = 'underweight'
@@ -24,10 +24,7 @@ function calcBMI(name, age, weight, height) {
         personObj.recommendation = 'admission required'
     }
 
-    return(personObj);
+    return (personObj);
 }
 
-
-
 console.log(calcBMI('Peter', 29, 75, 182));
-calcBMI('Honey Boo Boo', 9, 57, 137)
