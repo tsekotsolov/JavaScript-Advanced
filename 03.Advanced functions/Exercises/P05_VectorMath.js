@@ -28,6 +28,7 @@ let solution = (function () {
 
 })();
 
+console.log(typeof(solution));
 
 console.log(solution.add([1, 1], [1, 0]));
 
