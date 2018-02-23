@@ -28,8 +28,6 @@ let solution = (function () {
 
 })();
 
-console.log(typeof(solution));
-
 console.log(solution.add([1, 1], [1, 0]));
 
 console.log(solution.multiply([3.5, -2], 2));
