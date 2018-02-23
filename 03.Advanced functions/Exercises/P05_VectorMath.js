@@ -2,27 +2,27 @@ let solution = (function () {
 
     return {
         add: function (vectorFirst, vectorSecond) {
-            return [vectorFirst[0]+vectorSecond[0],vectorFirst[1]+vectorSecond[1]];
+            return [vectorFirst[0] + vectorSecond[0], vectorFirst[1] + vectorSecond[1]];
         },
 
-        multiply : function(vector,scalar){
+        multiply: function (vector, scalar) {
 
-            return [vector[0]*scalar,vector[1]*scalar]
+            return [vector[0] * scalar, vector[1] * scalar]
         },
 
-        length : function(vector){
+        length: function (vector) {
 
-            return Math.sqrt(Math.pow(vector[0],2)+Math.pow(vector[1],2))
+            return Math.sqrt(Math.pow(vector[0], 2) + Math.pow(vector[1], 2))
         },
 
-        dot : function(vectorFirst,vectorSecond){
+        dot: function (vectorFirst, vectorSecond) {
 
-            return vectorFirst[0]*vectorSecond[0]+vectorFirst[1]*vectorSecond[1]
+            return vectorFirst[0] * vectorSecond[0] + vectorFirst[1] * vectorSecond[1]
         },
 
-        cross : function(vectorFirst,vectorSecond){
+        cross: function (vectorFirst, vectorSecond) {
 
-            return vectorFirst[0]*vectorSecond[1]-vectorFirst[1]*vectorSecond[0]
+            return vectorFirst[0] * vectorSecond[1] - vectorFirst[1] * vectorSecond[0]
         }
     }
 
