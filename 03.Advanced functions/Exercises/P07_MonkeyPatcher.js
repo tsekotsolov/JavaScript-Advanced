@@ -19,9 +19,8 @@ function result(command) {
       } else {
         scoreArr.push(`${this.upvotes}`);
         scoreArr.push(`${this.downvotes}`);
-
       }
-      
+
       scoreArr.push(`${this.upvotes}` - `${this.downvotes}`);
       scoreArr = scoreArr.map(Number);
 
