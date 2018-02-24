@@ -34,7 +34,9 @@ function result(command) {
       } else if (this.upvotes / (this.upvotes + this.downvotes) > 0.66) {
         rating = 'hot';
         scoreArr.push(rating);
-      } else if ((this.upvotes / (this.upvotes + this.downvotes) <= 0.66) && (this.upvotes > 100 || this.downvotes > 100) && this.upvotes - this.downvotes >= 0) {
+      } else if ((this.upvotes / (this.upvotes + this.downvotes) <= 0.66) &&
+        (this.upvotes > 100 || this.downvotes > 100) &&
+        this.upvotes - this.downvotes >= 0) {
         rating = 'controversial';
         scoreArr.push(rating);
       } else if (this.upvotes - this.downvotes < 0) {
