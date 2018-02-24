@@ -44,7 +44,6 @@ function result(command) {
         rating = 'new';
         scoreArr.push(rating);
       }
-
       return scoreArr;
     }
   }
@@ -60,7 +59,7 @@ var forumPost = {
   downvotes: 5
 };
 
-// Under border case
+
 var answer = result.call(forumPost, 'score');
 var expected = [4, 5, -1, 'new'];
 
