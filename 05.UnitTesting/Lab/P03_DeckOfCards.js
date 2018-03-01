@@ -51,4 +51,3 @@ function printDeckOfCards(cards) {
 printDeckOfCards(['AS', '10D', 'KH', '2C']);
 printDeckOfCards(['5S', '3D', 'QD', '1C']);
 printDeckOfCards(['3D', 'JC', '2S', '10H', '5X']);
-
