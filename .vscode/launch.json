@@ -15,7 +15,8 @@
             "--timeout",
             "999999",
             "--colors",
-            "${file}"
+            "${file}",
+          
         ],
         "internalConsoleOptions": "openOnSessionStart"
     },
