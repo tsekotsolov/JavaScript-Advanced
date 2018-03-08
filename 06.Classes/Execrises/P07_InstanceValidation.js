@@ -28,14 +28,53 @@ class CheckingAccount {
             throw new TypeError('Invalid e-mail');
         }
     }
-
-    get email(){
+    get email() {
         return this._email;
+    }
+
+    set firstName(value) {
+        const regexLength = /^.{3,20}$/g;
+        const regexLetters = /^[A-Za-z]+$/g;
+
+        if (!regexLength.test(value)) {
+            throw new TypeError('First name must be between 3 and 20 characters long');
+        }
+
+        if (!regexLetters.test(value)) {
+            throw new TypeError('First name must contain only Latin characters');
+        }
+
+        this._firstName = value;
+
+    }
+
+    get firstName() {
+        return this._firstName;
+    }
+
+    set lastName(value) {
+        const regexLength = /^.{3,20}$/g;
+        const regexLetters = /^[A-Za-z]+$/g;
+
+        if (!regexLength.test(value)) {
+            throw new TypeError('Last name must be between 3 and 20 characters long');
+        }
+
+        if (!regexLetters.test(value)) {
+            throw new TypeError('Last name must contain only Latin characters');
+        }
+
+        this._lastName = value;
+
+    }
+
+    get lastName() {
+        return this._lastName;
     }
 
 }
 
 
-let acc = new CheckingAccount('131455', 'ivan@some.com', 'Ivan', 'Petrov');
-
-console.log(acc.email);
+//let acc = new CheckingAccount('131455', 'ivan@', 'Ivan', 'Petrov')
+//let acc = new CheckingAccount('131455', 'ivan@some.com', 'I', 'Petrov')
+//let acc = new CheckingAccount('131455', 'ivan@some.com', 'Ivan', 'P3trov')
