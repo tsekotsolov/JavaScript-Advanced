@@ -1,15 +1,14 @@
 let CheckingAccount = (
   function () {
 
-    function validate(prop, value) {
+    function validate(prop, value, position) {
 
       let template = {
         "clientID": /^[0-9]{6}$/g,
         "email": /^[A-Za-z0-9]+@[A-Za-z.]+$/g,
-        "firstName": /^[A-Za-z]+$/g,
-        "lastName": /^[A-Za-z]+$/g,
-        "firstNameLenght": /^.{3,20}$/g,
-        "lastNameLenght": /^.{3,20}$/g
+        "name": /^[A-Za-z]+$/g,
+        "nameLenght": /^.{3,20}$/g,
+
       }
 
       switch (prop) {
@@ -17,7 +16,6 @@ let CheckingAccount = (
           if (!template[prop].test(value)) {
             throw new TypeError('Client ID must be a 6-digit number');
           }
-
           break;
 
         case "email":
@@ -26,30 +24,16 @@ let CheckingAccount = (
           }
           break;
 
-        case "firstNameLenght":
+        case "nameLenght":
           if (!template[prop].test(value)) {
-            throw new TypeError('First name must be between 3 and 20 characters long');
+            throw new TypeError(`${position} must be between 3 and 20 characters long`);
           }
           break;
 
-        case "firstName":
+        case "name":
           if (!template[prop].test(value)) {
-            throw new TypeError('First name must contain only Latin characters');
+            throw new TypeError(`${position} must contain only Latin characters`);
           }
-
-          break;
-
-        case "lastNameLenght":
-          if (!template[prop].test(value)) {
-            throw new TypeError('Last name must be between 3 and 20 characters long');
-          }
-          break;
-
-        case "lastName":
-          if (!template[prop].test(value)) {
-            throw new TypeError('Last name must contain only Latin characters');
-          }
-
           break;
       }
 
@@ -70,7 +54,6 @@ let CheckingAccount = (
       }
       get clientId() {
         return this._clientId;
-        
       }
 
       set email(value) {
@@ -82,10 +65,9 @@ let CheckingAccount = (
       }
 
       set firstName(value) {
-        validate("firstNameLenght", value);
-        validate("firstName", value);
+        validate("nameLenght", value, "First name");
+        validate("name", value, "First name");
         this._firstName = value;
-
       }
 
       get firstName() {
@@ -93,9 +75,8 @@ let CheckingAccount = (
       }
 
       set lastName(value) {
-
-        validate("lastNameLenght", value);
-        validate("lastName", value);
+        validate("nameLenght", value,"Last name");
+        validate("name", value,"Last name");
         this._lastName = value;
       }
 
