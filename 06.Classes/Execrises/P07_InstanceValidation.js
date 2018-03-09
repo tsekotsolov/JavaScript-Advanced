@@ -8,7 +8,6 @@ let CheckingAccount = (
         "email": /^[A-Za-z0-9]+@[A-Za-z.]+$/g,
         "name": /^[A-Za-z]+$/g,
         "nameLenght": /^.{3,20}$/g,
-
       }
 
       switch (prop) {
