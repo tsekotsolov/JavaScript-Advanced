@@ -90,3 +90,5 @@ let CheckingAccount = (
 
 let acc = new CheckingAccount('131455', 'ivan@some.com', 'Ivan', 'Petrov');
 console.log(acc);
+
+console.log(typeof(acc));
