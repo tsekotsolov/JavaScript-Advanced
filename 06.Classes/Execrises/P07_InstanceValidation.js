@@ -1,6 +1,5 @@
 let CheckingAccount = (
   function () {
-
     function validate(prop, value, position) {
 
       let template = {
