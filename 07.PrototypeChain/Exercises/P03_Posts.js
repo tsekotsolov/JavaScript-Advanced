@@ -25,10 +25,12 @@ function solve() {
 
         toString() {
 
+            let result = super.toString() + '\n' + `Rating: ${this.likes-this.dislikes}`
+
             if (this.comments.length != 0) {
-                return super.toString() + '\n' + `Rating: ${this.likes-this.dislikes}\nComments:\n * ${this.comments.join('\n * ')}`.trim();
+                return result + '\n' + `Comments:\n * ${this.comments.join('\n * ')}`.trim();
             }
-            return super.toString() + '\n' + `Rating: ${this.likes-this.dislikes}`
+            return result;
 
         }
     }
@@ -64,5 +66,6 @@ let post = new classes.Post("Post", "Content");
 
 let test = new classes.SocialMediaPost("TestTitle", "TestContent", 5, 10);
 
-
+test.addComment('yesss')
+test.addComment('yesss')
 console.log(test.toString());
