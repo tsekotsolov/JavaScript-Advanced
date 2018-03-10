@@ -13,35 +13,31 @@ function solve() {
             return this._elementIndex;
         }
         toString() {
-            return `Element: ${(this.element)}\nSort: ${this.melonSort}\nElement Index: ${this._elementIndex}`
+            return `Element: ${(this.constructor.name.slice(0,-5))}\nSort: ${this.melonSort}\nElement Index: ${this._elementIndex}`
         }
     }
 
     class Watermelon extends Melon {
         constructor(weight, melonSort) {
             super(weight, melonSort)
-            this.element = "Water";
         }
     }
 
     class Firemelon extends Melon {
         constructor(weight, melonSort) {
             super(weight, melonSort)
-            this.element = "Fire";
         }
     }
 
     class Earthmelon extends Melon {
         constructor(weight, melonSort) {
-            super(weight, melonSort)
-            this.element = "Earth";
+            super(weight, melonSort)  
         }
     }
 
     class Airmelon extends Melon {
         constructor(weight, melonSort) {
             super(weight, melonSort)
-            this.element = "Air";
         }
     }
 
@@ -56,6 +52,9 @@ function solve() {
 
         morph() {
             this.element = this.elements[this.index++ % 2]
+        }
+        toString() {
+            return `Element: ${this.element}\nSort: ${this.melonSort}\nElement Index: ${this._elementIndex}`
         }
     }
 
