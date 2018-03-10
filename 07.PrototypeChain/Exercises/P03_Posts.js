@@ -28,7 +28,7 @@ function solve() {
             let result = super.toString() + '\n' + `Rating: ${this.likes-this.dislikes}`
 
             if (this.comments.length != 0) {
-                return result + '\n' + `Comments:\n * ${this.comments.join('\n * ')}`.trim();
+                return result + '\n' + `Comments:\n * ${this.comments.join('\n * ')}`;
             }
             return result;
 
