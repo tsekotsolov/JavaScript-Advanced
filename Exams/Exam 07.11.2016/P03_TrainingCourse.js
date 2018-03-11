@@ -7,16 +7,11 @@ class TrainingCourse {
 
     addTopic(title, date) {
 
-        let topic = {
-            title: title,
-            date: date
-        }
-        this.topics.push(topic);
+        this.topics.push({title,date})
 
         this.topics.sort((a, b) => 
             a.date - b.date
         )
-
         return this;
     }
 
