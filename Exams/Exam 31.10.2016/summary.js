@@ -1,21 +1,15 @@
 function summarize(selector) {
 
-  let container = $(selector);
+  $(selector).click(() => {
 
-  $('#generate').click(() => {
+    let strongContent = $('#content').find('strong').text();
 
-    let summary = $('<div id="summary">')
-    let h2 = $("<h2>Summary</h2>");
-    let p = $('<p>')
-    let result = ''
+    let summary = $(
+    `<div id="summary"> 
+    <h2>Summary</h2> 
+    <p>${strongContent}</p>
+    </div>`);
 
-    $("strong").each((iterator, element) => {
-      result += element.textContent;
-    });
-
-    p.text(result);
-    h2.appendTo(summary);
-    p.appendTo(summary);
-    summary.appendTo(selector);
-  })
+    $('#content').append(summary);
+  });
 }

@@ -10,18 +10,18 @@
 
 <body>
 
-    <div class="wrapper">
+    <div class="holder">
+        <input type="button" id="generate" value="Generate Summary" />
         <div id="content">
             <p>
-                <strong>The Theodor Pallady Museum </strong>is a museum situated in one of the oldest surviving merchant houses in
-                Bucharest, Romania. It
-                <strong>includes many works by the </strong>well-known Romanian
-                <strong>painter Theodor Pallady</strong>, as well as a number of European and Oriental furniture pieces.</p>
+                <strong>Important text. </strong>Not too important.
+                <strong>Also useful info.</strong>
+            </p>
         </div>
-        <input type="button" id="generate" value="Generate Summary" />
     </div>
+
     <script>
-        $(summarize('.wrapper'));
+        $(summarize('.holder'));
     </script>
 
 </body>
