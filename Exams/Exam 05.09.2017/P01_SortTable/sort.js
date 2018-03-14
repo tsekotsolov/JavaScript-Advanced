@@ -47,5 +47,5 @@ function sort(colIndex, order) {
 
     }
   }
-  $('tbody').append(rows);
+  $('tbody').empty().append(rows);
 }
