@@ -40,3 +40,8 @@ class StringBuilder {
     }
 }
 module.exports = StringBuilder;
+
+let test = new StringBuilder('');
+
+test.insertAt("sec",1)
+console.log(test._stringArray.length);
