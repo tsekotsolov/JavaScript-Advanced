@@ -1,10 +1,6 @@
 function sort(colIndex, order) {
 
   let rows = $('tbody > tr');
-  let prices = $('tr td:last-child');
-  let products = $('tr td:first-child');
-
-  console.log(rows);
 
   if (colIndex === 0) {
 
@@ -12,15 +8,44 @@ function sort(colIndex, order) {
 
       rows.sort((a, b) => {
 
-        let x = a;
-        console.log(x)
-        
-        
+        let aProduct = (a.children[0].textContent);
+        let bProduct = (b.children[0].textContent);
+
+        return aProduct.localeCompare(bProduct);
+
       })
+    else {
+      rows.sort((a, b) => {
 
-      console.log();
-  } else {
+        let aProduct = (a.children[0].textContent);
+        let bProduct = (b.children[0].textContent);
 
+        return bProduct.localeCompare(aProduct);
+
+      })
+    }
+
+  } else if (colIndex === 1) {
+
+    if (order === false) {
+      rows.sort((a, b) => {
+
+        let aPrice = Number(a.children[1].textContent);
+        let bPrice = Number(b.children[1].textContent);
+
+        return aPrice - bPrice
+
+      })
+    } else {
+      rows.sort((a, b) => {
+
+        let aPrice = Number(a.children[1].textContent);
+        let bPrice = Number(b.children[1].textContent);
+        return bPrice - aPrice
+
+      });
+
+    }
   }
-
+  $('tbody').append(rows);
 }
