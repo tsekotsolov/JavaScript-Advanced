@@ -23,7 +23,7 @@ describe("StringBuilder Tests", function () {
             expect(stringBuilder._stringArray.length).to.be.equal(3);
         });
 
-        it("Test with real object", function () {
+        it("Test with object", function () {
             
             expect(()=>stringBuilder = new StringBuilder({})).to.throw(TypeError);
         });
