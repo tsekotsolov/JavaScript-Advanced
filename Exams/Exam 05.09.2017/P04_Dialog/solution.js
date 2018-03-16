@@ -26,8 +26,6 @@ class Dialog {
 
     dialog.append(paragraph);
 
-    let obj = {};
-
 
     if (this.inputContainer !== undefined) {
 
@@ -45,12 +43,14 @@ class Dialog {
     container.append(overlay);
 
     let okFunction = () => {
-
+      
+      let obj = {};
       let allInputs = $('input');
 
       for (const input of allInputs.toArray()) {
-        
+
         obj[$(input).attr('name')] = $(input).val();
+        
       }
 
       this.callback(obj);
