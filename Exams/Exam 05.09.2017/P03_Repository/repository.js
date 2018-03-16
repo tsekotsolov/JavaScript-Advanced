@@ -69,10 +69,3 @@ class Repository {
         
     }
 }
-
-let props = {
-    color: "string",
-    length: "number"
-};
-let repo = new Repository(props);
-repo.del(5);
