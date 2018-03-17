@@ -26,7 +26,7 @@ class Player {
   }
 
   addScore(value) {
-    if ((Number(value) || Number(value) === 0) && value != null) {
+    if (!isNaN(value)&&value!=null) {
       this.score.push(Number(value));
       this.score.sort((a, b) => b - a)
     }
