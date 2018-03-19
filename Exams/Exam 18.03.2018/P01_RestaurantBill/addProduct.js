@@ -16,8 +16,6 @@ function addProduct() {
         let allTdWithPrices = $('#product-list tr td:last-child');
         let sum = 0;
 
-        allTdWithPrices.toArray()
-
         for (const price of allTdWithPrices.toArray()) {
             sum += Number(price.textContent);
         }
